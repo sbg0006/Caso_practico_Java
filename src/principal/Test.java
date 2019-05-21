@@ -9,21 +9,17 @@ public class Test {
 	public static void main(String[] args) throws IOException {
 		
 		// Declaración de variables		
-		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+		
 		String nombre;	
 		String apellido;
 		String respuesta;
 		Integer edad;
 		
 		// Preguntar al usuario ...		
-		System.out.print("Esbribe tu nombre: ");		
-		nombre = teclado.readLine();				
 		
-		System.out.print("Esbribe tu apellido: ");			
-		apellido = teclado.readLine();	
-		
-		System.out.print("Esbribe tu edad: ");			
-		edad = Integer.parseInt(teclado.readLine());	
+		nombre = pideDato("Esbribe tu nombre: ");						
+		apellido = pideDato("Esbribe tu apellido: ");		
+		edad = Integer.parseInt(pideDato("Escribe tu edad: "));	
 		
 		// Obtener la respuesta	
 		respuesta = nombre + ", " + apellido + ", " + edad;	
@@ -31,6 +27,15 @@ public class Test {
 		// Mostrar la respuesta por pantalla
 		System.out.println(respuesta);
 		
+	}
+	
+	private static String pideDato(String pregunta) throws IOException {
+		
+		BufferedReader teclado = new BufferedReader(new InputStreamReader(System.in));
+		String respuesta;
+		System.out.print(pregunta);
+		respuesta = teclado.readLine();
+		return respuesta;
 	}
 
 }
