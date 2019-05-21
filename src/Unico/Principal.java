@@ -17,9 +17,8 @@ public class Principal {
 	private static void ejecutarOpcion(int opcion) {
 		
 		switch(opcion) {
-		case 8: Intercambio.potencia();break;
-		case 12: Intercambio.dado();break;
-		case 66: Intercambio.quiniela();break;
+		case 7: Intercambio.maxMinMed();break;
+	
 		}		
 	}
 
@@ -27,10 +26,8 @@ public class Principal {
 		
 		System.out.println("\nMENU PRUINCIPAL");
 		System.out.println("----------------");
-		System.out.println("8. Estructurado");
-		System.out.println("12. Intercambio");
-		System.out.println("66. Quiniela");
-		System.out.println("4. XXXXXXX");
+		System.out.println("7. maxMinMed");
+	
 	}  
 
 }
