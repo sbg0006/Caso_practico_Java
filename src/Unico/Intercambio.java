@@ -87,14 +87,15 @@ public class Intercambio {
 		
 		Integer resultado;
 		String mostrar;
+		String salida="";
 		for (int p=1; p <= 14; p++) {
 			resultado=aleatorio(1,3);
-			mostrar =(resultado==3)?"X":"" + resultado;
-			
-			System.out.println("Resultado " + p + " es: " + mostrar);
+			mostrar = (resultado==3)?"X":"" + resultado;	
+			salida += "Resultado " + p + " es: " + mostrar +"\n";		
 		}
 		
-		
+		System.out.println(salida);
+			
 	}
 	
 }
